@@ -1,11 +1,12 @@
 {
   "name": "puppetfinland-ruby",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "author": "Puppet-Finland team",
   "license": "BSD license",
-  "summary": "Install and configure ruby",
+  "summary": "Setup ruby",
   "source": "https://github.com/Puppet-Finland/ruby.git",
   "project_page": "https://github.com/Puppet-Finland/ruby",
   "dependencies": [
+    { "name": "puppetfinland/os", "version_requirement": ">= 0.5.3" }
   ]
 }
