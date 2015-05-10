@@ -26,6 +26,6 @@ class ruby
 
 if $manage == 'yes' {
 
-    include ruby::install
+    include ::ruby::install
 }
 }

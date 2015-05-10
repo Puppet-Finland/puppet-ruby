@@ -16,7 +16,7 @@ class ruby::versionomy
 
 ) inherits ruby::params {
 
-    include ruby
+    include ::ruby
 
     $package_name = $provider ? {
         undef => $::ruby::params::ruby_versionomy_package_name,
@@ -24,9 +24,9 @@ class ruby::versionomy
     }
 
     package { 'ruby-versionomy':
-        ensure => present,
+        ensure   => present,
         provider => $provider,
-        name => $package_name,
-        require => Class['ruby::install'],
+        name     => $package_name,
+        require  => Class['ruby::install'],
     }
 }

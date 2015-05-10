@@ -5,11 +5,11 @@
 #
 class ruby::net_ldap inherits ruby::params {
 
-    include ruby
+    include ::ruby
 
     package { 'ruby-net_ldap':
-        name => $::ruby::params::ruby_net_ldap_package_name,
-        ensure => present,
+        ensure  => present,
+        name    => $::ruby::params::ruby_net_ldap_package_name,
         require => Class['ruby::install'],
     }
 }
