@@ -22,4 +22,6 @@ class ruby::params {
             fail("Unsupported operating system ${::osfamily}")
         }
     }
+
+    $ruby_versionomy_gem_name = 'versionomy'
 }
