@@ -12,13 +12,18 @@ class ruby::net_ldap
 
     include ::ruby
 
-    if $::osfamily == 'RedHat' and $manage_epel {
-        include ::epel
+    if $::osfamily == 'RedHat' {
+        $require = Class['::epel']
+        if $manage_epel {
+            include ::epel
+        }
+    } else {
+        $require = undef
     }
 
     package { 'ruby-net_ldap':
         ensure  => present,
         name    => $::ruby::params::ruby_net_ldap_package_name,
-        require => Class['ruby::install'],
+        require => [ Class['ruby::install'], $require ]
     }
 }
