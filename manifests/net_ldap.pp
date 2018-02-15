@@ -3,9 +3,18 @@
 #
 # Setup ruby-net-ldap
 #
-class ruby::net_ldap inherits ruby::params {
+class ruby::net_ldap
+(
+    Boolean $manage_epel = true
+
+) inherits ruby::params
+{
 
     include ::ruby
+
+    if $::osfamily == 'RedHat' and $manage_epel {
+        include ::epel
+    }
 
     package { 'ruby-net_ldap':
         ensure  => present,

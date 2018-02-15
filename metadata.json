@@ -1,12 +1,13 @@
 {
   "name": "puppetfinland-ruby",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "author": "Puppet-Finland team",
   "license": "BSD license",
   "summary": "Setup ruby",
   "source": "https://github.com/Puppet-Finland/ruby.git",
   "project_page": "https://github.com/Puppet-Finland/ruby",
   "dependencies": [
-    { "name": "puppetfinland/os", "version_requirement": ">= 0.5.3" }
+    { "name": "puppetfinland/os", "version_requirement": ">= 0.5.3" },
+    { "name": "stahnma/epel", "version_requirement": ">= 1.3.0" }
   ]
 }
