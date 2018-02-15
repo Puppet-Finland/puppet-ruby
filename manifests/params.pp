@@ -11,7 +11,7 @@ class ruby::params {
     case $::osfamily {
         'RedHat': {
             $ruby_package_name = 'ruby'
-            $ruby_net_ldap_package_name = 'rubygems-net-ldap'
+            $ruby_net_ldap_package_name = 'rubygem-net-ldap'
         }
         'Debian': {
             $ruby_package_name = 'ruby'
